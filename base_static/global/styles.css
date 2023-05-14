@@ -1,0 +1,612 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: linear-gradient(180deg, #FFFFFF 20.31%, rgba(124, 184, 255, 0.8) 100%);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.ondas{
+    background-image: url('assets/Ondas.svg');
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    mix-blend-mode:soft-light;
+    opacity: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 30%;
+    z-index: 1;
+    
+}
+
+header{
+    height: 6vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 14.5vw 0 6vw;
+    margin-top: 1vw;
+    align-items: center;
+
+}
+
+header .logo {
+    height: 100%;
+
+}
+
+header .logo img{
+    max-height:100%;
+    
+}
+
+header nav ul{
+    display: flex;
+    gap: 1vw;
+    font-family: 'SF Pro Text';
+    font-style:normal;
+    font-weight:normal;
+    font-size: 1.2vw;
+    /* identical to box height */
+
+    letter-spacing: -0.02em;
+
+}
+
+header nav ul li a{
+    color: #22313f;
+}
+
+header nav ul li a:hover{
+    text-decoration: underline;
+}
+
+/* HOME */
+
+.car_home{
+    background-image: url('assets/car_home.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40vw;
+    height: 45VW;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: brightness(115%);
+    animation: show_car_home 0.2s ease-in 0s forwards;
+}
+
+@keyframes show_car_home {
+	from{
+		right: -30vw;
+	} to{
+        right: -10vw;
+	}
+}
+
+.chamada1{
+
+    background-image: url('assets/chamada1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50vw;
+    height: 45VW;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 29%;
+
+}
+
+
+.dashboard{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+}
+
+.conteudo_central{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+    height: 50%;
+    justify-content: space-between;
+    column-gap: 20vw;
+    align-items: center;
+    position: absolute;
+    bottom: 50%;
+    transform: translate(50%, 30%);
+    right: 50%;
+
+}
+
+.clients_form{
+    width: 30vw;
+    height: 30vw;
+
+}
+
+.conteudo_central .buttons{
+
+   display: flex;
+   row-gap: 2vw;
+   flex-direction: column;
+}
+
+.conteudo_central .form_buttons{
+
+    width: 20vw;
+    height: 4vw;
+    background: #FFFFFF;
+    border-radius: 10vw;
+    filter: drop-shadow(0px 11px 20px rgba(0, 104, 224, 0.385));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'SF Pro Text';
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #22313f;
+    font-size: 1.4vw;
+    transition: 1s;
+}
+
+.conteudo_central .form_buttons:hover{
+
+    background: #22313f;
+    color: white;
+    filter: drop-shadow(0px 11px 20px rgba(2, 52, 109, 0.717));
+}
+
+
+.car_wash{
+    background-image: url('assets/car_wash.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60vw;
+    height: 40VW;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(16%, -65%);
+    z-index: 2;
+    animation: show_car_wash 1.8s ease-in 0s forwards;
+}
+
+@keyframes show_car_wash {
+	from{
+		opacity: 0;
+	} to{
+        opacity: 100%;
+	}
+}
+
+.client_form{
+    width: 40vw;
+    height: 40VW;
+    position: absolute;
+    top: 50%;
+    right: 16%;
+    z-index: 2;
+    background: rgba(255, 255, 255);
+    box-shadow: 5px 2px 50px -10px #012b5a2e;
+    border-radius: 26px;
+    z-index: 800;
+    animation: show_form 1s ease-in-out 0s forwards;
+    padding: 2vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.client_form_sub{
+    width: 40vw;
+    height: 40VW;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    z-index: 2;
+    transform: translate(300%, -65%);
+    background: rgba(124, 184, 255, 0.45);
+    box-shadow: 0px 23px 52px -6px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 26px;
+    z-index: 799;
+    animation: show_form 1s ease-in-out 0.1s forwards;
+    padding: 2vw 0 0 2vw;
+    display: flex;
+    align-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    gap: 1vw;
+    box-sizing: border-box;
+
+}
+
+@keyframes show_form {
+	from{
+		transform: translate(300%, -65%);
+	} to{
+        transform: translate(30%, -65%);
+	}
+}
+
+.button_form {
+    position: relative;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    margin-left: 0.5vw;
+  }
+  
+  .button_form:active {
+    transform: translateY(3px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .button_form span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    color: #fff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .client_form_sub .image-upload-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .client_form_sub  .image-preview {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url('assets/moldura_foto_car.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .client_form_sub  .image-preview .photo1 {
+    width: 4.5vw;
+    height: 4.5vw;
+    background-image: url('assets//bugatti_photo1.jpeg');
+    background-size:cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .client_form_sub  .image-preview .photo1:hover {
+    background-size:300%;
+  }
+
+  .client_form_sub  .image-preview .photo2 {
+    width: 4.5vw;
+    height: 4.5vw;
+    background-image: url('assets//bugatti_photo2.jpeg');
+    background-size:cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+
+  .client_form_sub  .image-preview .photo2:hover {
+    background-size:300%;
+  }
+
+
+  .client_form_sub  .image-preview .photo3 {
+    width: 4.5vw;
+    height: 4.5vw;
+    background-image: url('assets//bugatti_photo3.jpeg');
+    background-size:cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .client_form_sub  .image-preview .photo3:hover {
+    background-size:300%;
+  }
+
+
+  .client_form_sub  .image-preview .photo4 {
+    width: 4.5vw;
+    height: 4.5vw;
+    background-image: url('assets//bugatti_photo4.jpeg');
+    background-size:cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    transition: background-size 2s ease;
+  }
+
+  .client_form_sub  .image-preview .photo4:hover {
+    background-size:300%;
+  }
+
+  .client_form_sub .upload-input {
+    display: none;
+  }
+
+  .client_form_sub  .upload-label {
+    padding: 1vw;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    position: relative;
+    width: 4vw;
+    height: 0.5vw;
+    border-radius:3vw;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;    
+  }
+
+  .client_form_sub  .upload-label span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2vw;
+    color: #fff;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    font-family: 'SF Pro Text';
+    font-weight: bold;  
+    text-align: center;
+  
+  }
+
+  .client_form_sub  .upload-label:active {
+    transform: translateY(3px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  }
+
+
+
+  .client_form form{
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 3vw;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .titulo_forms_clients{
+    font-family: 'SF Pro Text';
+    font-weight: bold;
+    color: #22313f;
+    display: flex;
+    justify-content: center;
+
+  }
+
+.central_fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1vw;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+  .input_label{
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5vw;
+
+  }
+
+  .input_label label{
+
+    font-family: 'SF Pro Text';
+    font-weight:normal;
+    color: #22313f;
+
+  }
+
+  .input_label input{
+
+    width: 15vw;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 21px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    height: 1.3vw;
+    padding: 0.4vw;
+    font-family: 'SF Pro Text';
+    font-weight: normal;
+    color: #22313f;
+  }
+
+  .car_fields_title{
+
+    font-family: 'SF Pro Text';
+    font-weight: normal;
+    color: #22313f;
+    display: flex;
+    justify-content: start;
+    padding-left: 1vw;
+
+  }
+
+  .car_fields_title h2{
+
+    font-weight:600;
+    font-size: 1.5vw;
+
+  }
+
+  .car_fields{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 1vw;
+    justify-content: center;
+    justify-items: center;
+    margin-top: -2vw;
+
+  }
+
+  #car_color{   
+    width: 16vw;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 21px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    height: 2.1vw;
+    border-right: 1vw solid white;
+    padding-left: 1vw;
+    font-family: 'SF Pro Text';
+    font-weight: normal;
+    color: #22313f;
+    margin: 2vw solid white;
+  }
+
+  .car_color_input span{
+    display: flex;
+    gap: 0.5vw;
+    align-items: center;
+    
+
+  }
+
+  .car_color_input span p{
+    
+    width: 1vw;
+    height: 1vw;
+    transform: translateY(10%);
+    border-radius: 100%;
+  }
+
+  .car_color_input span .p_red{
+    
+    background-color: lightcoral;
+  }
+
+  .car_color_input span .p_blue{
+    
+    background-color: lightblue;
+  }
+
+  .car_color_input span .p_yellow{
+    
+    background-color: rgb(255, 248, 114);
+  }
+
+  .car_color_input span .p_green{
+    
+    background-color: lightgreen;
+  }
+
+  .car_color_input span .p_black{
+    
+    background-color: black;
+  }
+
+  .car_color_input span .p_white{
+    
+    background-color: white;
+    border: 0.1vw solid black;
+  }
+
+
+.checkbox_principal_container{
+  display: flex;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  justify-content: space-around;
+  margin-top: -2vw ;
+
+}
+
+    /* Styling for the checkbox container */
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3vw;
+  width: 4vw;
+  }
+
+    /* Styling for the checkbox input */
+.checkbox-container input[type="checkbox"] {
+  appearance: none;
+  width: 1vw;
+  height: 1vw;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+
+    /* Styling for the checkbox label */
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'SF Pro Text';
+  font-weight: normal;
+  font-size: 0.8vw;
+  overflow-wrap: break-word;
+  text-align: center;
+  color: #22313f;
+
+  }
+
+    /* Styling for the checkbox icon */
+.checkbox-container .icon {
+  }
+
+    /* Styling for the checkbox checked state */
+.checkbox-container input[type="checkbox"]:checked {
+  border-color: #75AFF4;
+  filter: drop-shadow(2px 1px 10px rgba(117, 175, 244, 0.7));
+  }
+
+    /* Styling for the checkbox label text in checked state */
+.checkbox-container input[type="checkbox"]:checked + label {
+  font-weight: bold;
+  }
+ 
