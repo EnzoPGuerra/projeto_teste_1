@@ -7,101 +7,147 @@
 
 {% block content %}
 
-    <div class='dashboard'>
-        
-        <div class="client_form">
-            <form action="" methos='post' id='create_client' target='_blank'>
-                <span class='titulo_forms_clients'><h2>Manage Clients</h2></span>
-                <div class="central_fields">
-                    <div class='first_name_input input_label'>
-                        <label for="first_name">First Name</label>
-                            <input type="text" name="first_name_input" id="first_name">
-                    </div>
-                    <div class='last_name_input input_label'>
-                        <label for="last_name">Last Name</label>
-                        <input type="text" name="last_name_input" id="last_name">          
-                    </div>
-                    <div class='email_input input_label'>
-                        <label for="email">Email</label>
-                        <input type='email' name="email_input" id="email">          
-                    </div>
-                    <div class='tel_input input_label'>
-                        <label for="tel">Tel</label>
-                        <input type="tel" name="tel_input" id="tel">          
-                    </div>      
-                </div>
-                <span class='car_fields_title'><h2>Car Info</h2></span> 
-                <div class="car_fields">
-                    <div class='car_brand_input input_label'>
-                        <label for="car_brand">Brand</label>
-                            <input type="text" name="car_brand_input" id="car_brand">
-                    </div>
-                    <div class='car_model_input input_label'>
-                        <label for="car_model">Model</label>
-                        <input type="text" name="car_model_input" id="car_model">          
-                    </div>
-                    <div class='car_color_input input_label'>
-                        <span>
-                            <label for="car_color">Color:</label>
-                            <p id='exibir_cor' class=""></p>
-                        </span>
-                        <select name="car_color" id="car_color">
-                            <option value="" selected>Select a Color</option>
-                            <option value="blue">Blue</option>
-                            <option value="red">Red</option>
-                            <option value="yellow">Yellow</option>
-                            <option value="green">Green</option>
-                            <option value="black">Black</option>
-                            <option value="white">White</option>
-                        </select>      
-                    </div>
-                    <div class='car_plate_input input_label'>
-                        <label for="car_plate">Plate</label>
-                        <input type="car_plate" name="car_plate_input" id="car_plate">          
-                    </div>      
-                </div>
-                <div class='checkbox_principal_container'>
-                    <div class="checkbox-container">
-                        <span class="icon">🚙</span>
-                        <input type="checkbox" id="car-wash">
-                        <label for="polishing-waxing">Full Car Wash</label>
-                    </div>
-                    <div class="checkbox-container">
-                        <span class="icon">✨</span>
-                        <input type="checkbox" id="polishing-waxing">
-                        <label for="polishing-waxing">Polishing &amp; Waxing</label>
-                    </div>
-                    <div class="checkbox-container">
-                        <span class="icon">❄️</span>
-                        <input type="checkbox" id="ac-sanitization">
-                        <label for="ac-sanitization">AC Sanitization</label>
-                    </div>
-                    <div class="checkbox-container">
-                        <span class="icon">💺</span>
-                        <input type="checkbox" id="upholstery-restoration">
-                        <label for="upholstery-restoration">Upholstery Restoration</label>
-                    </div>
-                </div>
-            </form>
-            
+    <div class='degrade_clients'>
+        <div class='ondas'>
         </div>
-        <div class="client_form_sub">
-            <div class="image-upload-container">
-                <label for="upload" class="upload-label"><span>+photo</span></label>
-                <input type="file" id="upload" class="upload-input" form='create_client'>
-                <div class="image-preview"><img class='photo1' src="" alt=""></div>
-                <div class="image-preview"><div class="photo2"></div></div>
-                <div class="image-preview"><div class="photo3"></div></div>
-                <div class="image-preview"><div class="photo4"></div></div>
+        <section class='dashboard'>
+
+            <div class="client_form">
+                <form action="" methos='post' id='create_client' target='_blank'>
+                    <span class='titulo_forms_clients'><h2>Manage Clients</h2></span>
+                    <div class="central_fields">
+                        <div class='first_name_input input_label'>
+                            <label for="first_name">First Name</label>
+                                <input type="text" name="first_name_input" id="first_name">
+                        </div>
+                        <div class='last_name_input input_label'>
+                            <label for="last_name">Last Name</label>
+                            <input type="text" name="last_name_input" id="last_name">          
+                        </div>
+                        <div class='email_input input_label'>
+                            <label for="email">Email</label>
+                            <input type='email' name="email_input" id="email">          
+                        </div>
+                        <div class='tel_input input_label'>
+                            <label for="tel">Tel</label>
+                            <input type="tel" name="tel_input" id="tel">          
+                        </div>      
+                    </div>
+                    <span class='car_fields_title'><h2>Car Info</h2></span> 
+                    <div class="car_fields">
+                        <div class='car_brand_input input_label'>
+                            <label for="car_brand">Brand</label>
+                                <input type="text" name="car_brand_input" id="car_brand">
+                        </div>
+                        <div class='car_model_input input_label'>
+                            <label for="car_model">Model</label>
+                            <input type="text" name="car_model_input" id="car_model">          
+                        </div>
+                        <div class='car_color_input input_label'>
+                            <span>
+                                <label for="car_color">Color:</label>
+                                <p id='exibir_cor' class=""></p>
+                            </span>
+                            <select name="car_color" id="car_color">
+                                <option value="" selected>Select a Color</option>
+                                <option value="blue">Blue</option>
+                                <option value="red">Red</option>
+                                <option value="yellow">Yellow</option>
+                                <option value="green">Green</option>
+                                <option value="black">Black</option>
+                                <option value="white">White</option>
+                            </select>      
+                        </div>
+                        <div class='car_plate_input input_label'>
+                            <label for="car_plate">Plate</label>
+                            <input type="car_plate" name="car_plate_input" id="car_plate">          
+                        </div>      
+                    </div>
+                    <div class='services_for_clients'>
+                        <span class='services_fields_title'><h2>Services</h2></span> 
+                        <div class='services_select'>
+                            <select name="car_color" id="car_color">
+                                <option value="" selected>Select a Service</option>
+                                <option value="blue">Full Car Wash 🚙</option>
+                                <option value="red">Polishing &amp; Waxingv ✨</option>
+                                <option value="yellow">AC Sanitization ❄️</option>
+                                <option value="green">Upholstery Restoration 💺</option>
+                            </select>  
+                        </div>
+
+                        <div class='services-date'>
+                            <label class="services_date_title">Service scheduled for:</label>
+                            <input type="date" name="services_date" id="services_date">
+                            <input type="time" name="services_time" id="services_time">
+                        </div>
+                    </div>
+                </form>
+                
             </div>
-            <button type="submit" class='button_form' ><span>+</span></button>
-        </div>
+            <div class="client_form_sub">
+                <div class="image-upload-container">
+                    <label for="upload" class="upload-label"><span>+photo</span></label>
+                    <input type="file" id="upload" class="upload-input" form='create_client'>
+                    <div class="image-preview"><div class='photo'><img  src={% static 'global/assets/bugatti_photo1.jpeg' %} alt=""></div></div>
+                    <div class="image-preview"><div class='photo'><img  src={% static 'global/assets/bugatti_photo2.jpeg' %} alt=""></div></div>
+                    <div class="image-preview"><div class='photo'><img  src={% static 'global/assets/bugatti_photo3.jpeg' %} alt=""></div></div>
+                    <div class="image-preview"><div class='photo'><img  src={% static 'global/assets/bugatti_photo4.jpeg' %} alt=""></div></div>
+                </div>
+                <button type="submit" class='button_form' ><span>+</span></button>
+            </div>
 
+            <div class='car_wash'>
+            </div>
 
-        <div class='car_wash'>
-        </div>
-    
+        </section>
+
+        <section class='clients_list_sec'>
+            <div class='principal_clients_list'>
+                <div class="search_clients_container">
+                    <form method='GET' class='search_clients_form' name='search_clients_form' action='{% url 'clients:home' %}'>
+                        <div class="search_input_wraper">
+                            <input type="search" name="client_search" id="" required value='{{search_term}}'>
+                                <button type="submit" class'button_search_clients'></button>
+                        </div>
+                    </form>
+                </div>
+                <div class='clients_list'>
+                    <div class='client_card_container'>
+                        <div class='client_card'>
+                            <div class="client_card_info">
+                                <div class='client_photo'></div>
+                                <div class='clients_info'>
+                                    <span class='full_name'><p>Full Name</p></span>
+                                    <span class='phone'><span></span><p>(55) 111-111</p></span>
+                                    <span class='email'><span></span><p>test@test.com</p></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='client_card_back'>
+                            <div class='client_card_back_seta'></div>
+                            <div class='cars_info_total'>
+                                <div class='cars_info'>
+                                    <span class='car_brand'><span></span><p>Car Brand</p></span>
+                                    <span class='car_model'><span></span><p>Model</p></span>
+                                    <span class='car_color'><span></span><p>Color</p></span>
+                                    <span class='car_plate'><span></span><p>Plate</p></span>
+                                </div>
+                                <div class="clients_list_car_photos">
+                                    <div class="clients_list_photo"><img  src={% static 'global/assets/bugatti_photo1.jpeg' %} alt=""></div>
+                                    <div class="clients_list_photo"><img  src={% static 'global/assets/bugatti_photo2.jpeg' %} alt=""></div>
+                                    <div class="clients_list_photo"><img  src={% static 'global/assets/bugatti_photo3.jpeg' %} alt=""></div>
+                                    <div class="clients_list_photo"><img  src={% static 'global/assets/bugatti_photo4.jpeg' %} alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </div>
+
+
 
 
 

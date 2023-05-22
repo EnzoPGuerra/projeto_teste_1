@@ -7,27 +7,28 @@
 }
 
 body{
-    background: linear-gradient(180deg, #FFFFFF 20.31%, rgba(124, 184, 255, 0.8) 100%);
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
     position: relative;
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .ondas{
-    background-image: url('assets/Ondas.svg');
-    width: 100%;
-    height: 100%;
+    background-image: url('assets/back_ondas.svg');
+    background-size: contain;
+    width: 110%;
+    height: 50vw;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
-    mix-blend-mode:soft-light;
+    mix-blend-mode:overlay;
     opacity: 100%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     position: absolute;
-    top: 30%;
+    top: 10vw;
+    right: 50%;
+    transform: translate(50%,0%);
     z-index: 1;
+    overflow-x: hidden;
     
 }
 
@@ -74,6 +75,15 @@ header nav ul li a:hover{
 
 /* HOME */
 
+.chamada_home{
+  position: relative;
+  width: 100%;
+  height: 50vw;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: transparent;
+}
+
 .car_home{
     background-image: url('assets/car_home.png');
     background-size: contain;
@@ -102,76 +112,49 @@ header nav ul li a:hover{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 50vw;
-    height: 45VW;
+    width: 45vw;
+    height: 45vw;
     position: absolute;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
-    left: 29%;
+    left: 30%;
+}
+
+.dois_trocar{
+  width: 100%;
+  height: 50vw;
 
 }
+
+
+.degrade_clients{
+  background: linear-gradient(180deg, #FFFFFF 15%, rgba(124, 184, 255, 0.6) 30%, #FFFFFF 75%);
+  background-position: center;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+}
+
+/* Clients List */
 
 
 .dashboard{
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100vh;
-    z-index: 10000;
+    height: 50vw;
+    box-sizing: border-box;
+    z-index: 10;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: transparent;
 }
 
-.conteudo_central{
-    display: flex;
-    margin: auto;
-    width: fit-content;
-    height: 50%;
-    justify-content: space-between;
-    column-gap: 20vw;
-    align-items: center;
-    position: absolute;
-    bottom: 50%;
-    transform: translate(50%, 30%);
-    right: 50%;
-
-}
 
 .clients_form{
     width: 30vw;
     height: 30vw;
 
 }
-
-.conteudo_central .buttons{
-
-   display: flex;
-   row-gap: 2vw;
-   flex-direction: column;
-}
-
-.conteudo_central .form_buttons{
-
-    width: 20vw;
-    height: 4vw;
-    background: #FFFFFF;
-    border-radius: 10vw;
-    filter: drop-shadow(0px 11px 20px rgba(0, 104, 224, 0.385));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'SF Pro Text';
-    text-transform: uppercase;
-    font-weight: bolder;
-    color: #22313f;
-    font-size: 1.4vw;
-    transition: 1s;
-}
-
-.conteudo_central .form_buttons:hover{
-
-    background: #22313f;
-    color: white;
-    filter: drop-shadow(0px 11px 20px rgba(2, 52, 109, 0.717));
-}
-
 
 .car_wash{
     background-image: url('assets/car_wash.svg');
@@ -186,6 +169,7 @@ header nav ul li a:hover{
     transform: translate(16%, -65%);
     z-index: 2;
     animation: show_car_wash 1.8s ease-in 0s forwards;
+    margin-top: 4vw;
 }
 
 @keyframes show_car_wash {
@@ -213,6 +197,7 @@ header nav ul li a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 4vw;
 
 }
 
@@ -237,6 +222,7 @@ header nav ul li a:hover{
     flex-direction: column;
     gap: 1vw;
     box-sizing: border-box;
+    margin-top: 4vw;
 
 }
 
@@ -299,70 +285,27 @@ header nav ul li a:hover{
     align-items: center;
   }
 
-  .client_form_sub  .image-preview .photo1 {
+  .client_form_sub  .image-preview .photo{
     width: 4.5vw;
     height: 4.5vw;
-    background-image: url('assets//bugatti_photo1.jpeg');
-    background-size:cover;
     border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
     overflow: hidden;
+
   }
 
-  .client_form_sub  .image-preview .photo1:hover {
-    background-size:300%;
-  }
-
-  .client_form_sub  .image-preview .photo2 {
+  .client_form_sub  .image-preview .photo img{
     width: 4.5vw;
     height: 4.5vw;
-    background-image: url('assets//bugatti_photo2.jpeg');
-    background-size:cover;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
-  }
-
-  .client_form_sub  .image-preview .photo2:hover {
-    background-size:300%;
+    transition: 0.7s;
   }
 
 
-  .client_form_sub  .image-preview .photo3 {
-    width: 4.5vw;
-    height: 4.5vw;
-    background-image: url('assets//bugatti_photo3.jpeg');
-    background-size:cover;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
+  .client_form_sub  .image-preview .photo img:hover{
+    width: 6vw;
+    height: 6vw;
   }
 
-  .client_form_sub  .image-preview .photo3:hover {
-    background-size:300%;
-  }
-
-
-  .client_form_sub  .image-preview .photo4 {
-    width: 4.5vw;
-    height: 4.5vw;
-    background-image: url('assets//bugatti_photo4.jpeg');
-    background-size:cover;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
-    transition: background-size 2s ease;
-  }
-
-  .client_form_sub  .image-preview .photo4:hover {
-    background-size:300%;
-  }
-
+  
   .client_form_sub .upload-input {
     display: none;
   }
@@ -405,10 +348,9 @@ header nav ul li a:hover{
 
 
   .client_form form{
-
     display: flex;
     flex-direction: column;
-    row-gap: 3vw;
+    row-gap: 2vw;
     width: 100%;
     justify-content: center;
     justify-items: center;
@@ -487,7 +429,7 @@ header nav ul li a:hover{
     row-gap: 1vw;
     justify-content: center;
     justify-items: center;
-    margin-top: -2vw;
+    margin-top: -1vw;
 
   }
 
@@ -552,61 +494,353 @@ header nav ul li a:hover{
     border: 0.1vw solid black;
   }
 
+  .services_for_clients{
+    font-family: 'SF Pro Text';
+    padding-left: 1vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    'services_fildes_title services_date_block'
+    'services_select services_date_block';
+  }
 
-.checkbox_principal_container{
+  .services_fildes_title{
+    grid-area: services_fildes_title;
+  }
+
+  .services_select{
+    grid-area: services_select;
+    align-self: center;
+  }
+
+  .services-date{
+    font-weight: normal;
+    font-size: 0.8vw;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    color: #22313f;
+    grid-template-areas: 
+    'services_title services_title'
+    'services_date services_time';
+    grid-area: services_date_block;
+    align-content: end;
+    column-gap: 0.5vw;
+  }
+
+  .services_date_title{
+    grid-area: services_title;
+    padding-top: 1vw;
+    display: block;
+  }
+
+  .services-date input[type=date]{
+    grid-area: services_date;
+  }
+
+  .services-date input[type=time]{
+    grid-area: services_time;
+  }
+
+  .services-date input[type=time], input[type=date]{
+    padding: 0.7vw 0.7vw 0.7vw 1.7vw;
+    border: 1px solid #ccc;
+    border-radius: 1vw;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 21px rgba(0, 0, 0, 0.1);
+    border-radius: 1.3vw;
+    font-family: 'SF Pro Text';
+    color: #22313f;
+  }
+
+  .clients_list_sec{
+    width: 100%;
+    height: 50vw;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 3vw;
+  }
+
+
+ 
+  .principal_clients_list{
+    width: 70vw;
+    height: 45vw;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .search_clients_container form input{
+    width: 25vw;
+    height: 2.5vw;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 21px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 0 1vw 0 2.8vw;
+    font-family: 'SF Pro Text';
+    color: #22313f;
+    font-size: 1vw;
+    font-weight: normal;
+
+  }
+
+  .search_input_wraper{
+    position: relative;
+
+  }
+  .search_input_wraper button{
+    background-image: url('assets/icon_search_client.svg');
+    background-position:center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    opacity: 100%;
+    height: 1.4vw;
+    width: 1.4vw;
+    position: absolute;
+    top: 50%;
+    left: 1vw;
+    transform: translate(0,-50%);
+    transition: 1s;
+  }
+
+  .search_input_wraper button:hover{
+    transform:scale(1.4);
+  }
+
+  .search_input_wraper input:focus{
+    border: 0.15vw solid #22313f;
+}
+
+.clients_list{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.client_card_container{
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.client_card{
+  width: 35vw;
+  height: 10vw;
+  box-sizing: border-box;
+  position:absolute;
+  z-index: 1;
+}
+
+.client_card_back{
+  width: 26vw;
+  height: 10vw;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 0;
+  border-radius: 2vw;
+  right: 33vw;
+  background-color: white;
+  box-shadow: 0px 6px 21px rgba(0, 0, 0, 0.1);
+  transition-duration: 0.2s;
+  transition-timing-function:ease-in-out;
+  padding-left: -20vw;
+}
+
+.client_card_back_seta{
+
+  width: 1.5vw;
+  height: 1.5vw;
+  position: absolute;
+  background-image: url('assets/seta_icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  top: 50%;
+  right: 0.5vw;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.client_card_back:hover{
+  right: 6vw;
+  width: 33vw;
+  margin-left: 20vw;
+}
+
+.client_card_back:hover .client_card_back_seta{
+  transform: rotate(180);
+}
+
+.client_card_info{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
-  padding-left: 1vw;
-  padding-right: 1vw;
-  justify-content: space-around;
-  margin-top: -2vw ;
+  gap: 1vw;
+  padding: 0.5vw;
+  align-items: center;
+  font-family: 'SF Pro Text';
+  color: #22313f;
+  font-size: 0.9vw;
+  background-color: white;
+  border-radius: 2vw;
+  box-shadow: -10px 2px 15px rgba(0, 0, 0, 0.05);
+  
 
 }
 
-    /* Styling for the checkbox container */
-.checkbox-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3vw;
-  width: 4vw;
-  }
+.client_photo{
+  background-image: url('assets/user_icon.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8vw;
+  height: 8vw;
+}
 
-    /* Styling for the checkbox input */
-.checkbox-container input[type="checkbox"] {
-  appearance: none;
-  width: 1vw;
-  height: 1vw;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  }
+.clients_info{
+  width: 20vw;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3vw 3vw;
+  align-items:center;
+  align-content: center;
+  row-gap: 0.1vw;
+  grid-template-areas: 
+  "full_name full_name"
+  "phone email";
+}
 
-    /* Styling for the checkbox label */
-.checkbox-container label {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-family: 'SF Pro Text';
-  font-weight: normal;
-  font-size: 0.8vw;
-  overflow-wrap: break-word;
-  text-align: center;
-  color: #22313f;
-
-  }
-
-    /* Styling for the checkbox icon */
-.checkbox-container .icon {
-  }
-
-    /* Styling for the checkbox checked state */
-.checkbox-container input[type="checkbox"]:checked {
-  border-color: #75AFF4;
-  filter: drop-shadow(2px 1px 10px rgba(117, 175, 244, 0.7));
-  }
-
-    /* Styling for the checkbox label text in checked state */
-.checkbox-container input[type="checkbox"]:checked + label {
+.clients_info .full_name{
   font-weight: bold;
-  }
- 
+  font-size: 1.3vw;
+  grid-area: full_name;
+}
+
+.clients_info .phone, .clients_info .email, .cars_info .car_brand, .cars_info .car_model,.cars_info .car_color, .cars_info .car_plate {
+
+  display: flex;
+  column-gap: 0.1vw;
+  align-items: center;
+  flex-direction: row;
+}
+
+.clients_info .phone span{
+
+  width: 1.7vw;
+  height: 1.7vw;
+  background-image: url('assets/phone_icon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  grid-area: phone;
+}
+
+.clients_info .email span{
+
+  width: 1.7vw;
+  height: 1.7vw;
+  background-image: url('assets/email_icon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  grid-area: email;
+}
+
+.cars_info{
+  width: 25vw;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3vw 3vw;
+  align-items:center;
+  align-content: center;
+  row-gap: 0.1vw;
+  column-gap: 2vw;
+  margin-left: 5vw;
+}
+
+.cars_info .car_brand span{
+
+  width: 1.7vw;
+  height: 1.7vw;
+  background-image: url('assets/brand_icon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cars_info .car_model span{
+
+  width: 1.7vw;
+  height: 1.7vw;
+  background-image: url('assets/model_icon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cars_info .car_color span{
+
+  width: 1.7vw;
+  height: 1.7vw;
+  background-image: url('assets/color_palet_icon.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cars_info .car_plate span{
+
+  width: 1.7vw;
+  height: 1.7vw;
+  background-image: url('assets/icon_plate.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cars_info_total{
+  display: flex;
+  align-items: center;
+  column-gap: 1vw;
+  width: 100%;
+  height: 100%;
+}
+
+.clients_list_car_photos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 0.5vw;
+  width: 10vw;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin-right: 5vw
+}
+
+.clients_list_photo{
+  border-radius: 100%;
+  width: 4vw;
+  height: 4vw;
+  overflow: hidden;
+  margin-right: -1vw;
+  border: 0.2vw solid white;
+  box-sizing: border-box;
+
+}
+.clients_list_photo img{
+  width: 8vw
+}
+
